@@ -11,5 +11,5 @@ def reverse(x: int) -> int:
         a = int('-'+str(-x)[::-1])
         return 0 if a<-2**31 or a>2**31 else a
 
-x = 1534236469
+x = 1234
 print(reverse(x))
