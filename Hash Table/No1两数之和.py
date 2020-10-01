@@ -24,7 +24,7 @@ def twoSum(nums: list, target: int) -> list:
 
 
 
-nums = [1,2,3,4,7]
+nums = [1,2,3,5,7]
 target = 6
 
 print(twoSum(nums,target))
