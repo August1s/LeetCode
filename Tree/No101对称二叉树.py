@@ -4,7 +4,8 @@
 def isSymmetric(self, root: TreeNode) -> bool:
     if not root:    return True
     #return self.Iteration(root)
-    return Dfs(root.left, root.right)
+    #return Dfs(root.left, root.right)
+    return IterationQueue(root)
 
 ''' 
 def Iteration(self, rootnode: TreeNode) -> bool:
