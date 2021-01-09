@@ -1,5 +1,3 @@
-from No2两数相加 import ListNode
-from No2两数相加 import LinkList
 
 
 def deleteDuplicates(head: ListNode) -> ListNode:
