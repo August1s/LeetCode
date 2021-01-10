@@ -35,3 +35,28 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
         l2.next = self.mergeTwoLists(l1, l2.next)
         return l2
 
+
+# 在改变原链表基础上的迭代法
+def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+    start = ListNode()
+    start.next = l1
+    cur = start
+    while True:
+        if l1 and l2:
+            if l1.val >= l2.val:
+                cur.next = l2
+                cur = l2
+                l2 = l2.next
+            else:
+                cur.next = l1
+                cur = l1
+                l1 = l1.next
+
+        elif l1 and not l2:
+            cur.next = l1
+            return start.next
+        elif l2 and not l1:
+            cur.next = l2
+            return start.next
+        else:
+            return start.next

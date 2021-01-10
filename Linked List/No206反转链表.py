@@ -11,3 +11,25 @@ def reverseList(self, head: ListNode) -> ListNode:
         cur = next
 
     return pre
+
+
+# 利用栈
+def reverseList(self, head: ListNode) -> ListNode:
+    if not head or not head.next:
+        return head
+    
+    L = []
+    while head:
+        L.append(head)
+        head = head.next
+
+    newhead = L.pop()
+    p = newhead
+    p.next = None
+    while L:
+        temp = L.pop()
+        p.next = temp
+        temp.next = None
+        p = temp
+
+    return newhead
